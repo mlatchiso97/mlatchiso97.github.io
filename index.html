@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Melissa Atchison Senior Care &amp; Advocacy, LLC</title>
+<meta name="description" content="Private-pay, in-home senior care and patient advocacy in the Puget Sound region. One licensed provider offering hands-on care and honest advocacy at every stage of aging.">
+<style>
+  :root{
+    --navy:#1F3A5F;
+    --navy-dark:#152943;
+    --accent:#2E6B5E;
+    --accent-light:#E8F0EE;
+    --slate:#4A4A4A;
+    --cream:#FAF8F4;
+    --line:#E4E0D8;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Georgia', 'Times New Roman', serif;
+    color:var(--slate);
+    background:var(--cream);
+    line-height:1.6;
+  }
+  h1,h2,h3,.brand{
+    font-family:'Helvetica Neue', Arial, sans-serif;
+    color:var(--navy);
+  }
+  a{color:var(--accent); text-decoration:none;}
+  .wrap{max-width:1000px; margin:0 auto; padding:0 24px;}
+
+  header{
+    position:sticky; top:0; z-index:50;
+    background:var(--cream);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex; align-items:center; justify-content:space-between; padding:16px 24px;}
+  .brand{font-size:18px; font-weight:700; letter-spacing:0.3px;}
+  .brand span{display:block; font-size:11px; font-weight:400; color:var(--accent); letter-spacing:1px; text-transform:uppercase; font-family:Arial, sans-serif;}
+  nav.links{display:flex; gap:28px; font-family:Arial, sans-serif; font-size:14.5px;}
+  nav.links a{color:var(--navy); font-weight:600;}
+  .cta-small{
+    background:var(--navy); color:#fff !important; padding:9px 18px; border-radius:4px; font-weight:600;
+  }
+
+  .hero{
+    background:linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+    color:#fff;
+    padding:90px 24px 100px;
+    text-align:center;
+  }
+  .hero .eyebrow{
+    font-family:Arial, sans-serif; text-transform:uppercase; letter-spacing:2px; font-size:12.5px;
+    color:#9FC7BB; margin-bottom:18px;
+  }
+  .hero h1{
+    color:#fff; font-size:42px; margin:0 0 18px; line-height:1.25; max-width:780px; margin-left:auto; margin-right:auto;
+  }
+  .hero p.sub{
+    font-size:18px; max-width:620px; margin:0 auto 34px; color:#DCE4EC;
+  }
+  .hero-ctas{display:flex; gap:16px; justify-content:center; flex-wrap:wrap; font-family:Arial, sans-serif;}
+  .btn{
+    display:inline-block; padding:13px 28px; border-radius:4px; font-weight:700; font-size:15px;
+  }
+  .btn-primary{background:var(--accent); color:#fff;}
+  .btn-secondary{background:transparent; color:#fff; border:1.5px solid rgba(255,255,255,0.5);}
+
+  section{padding:76px 24px;}
+  .section-label{
+    font-family:Arial, sans-serif; text-transform:uppercase; letter-spacing:2px; font-size:12.5px;
+    color:var(--accent); font-weight:700; text-align:center; margin-bottom:10px;
+  }
+  h2.section-title{
+    text-align:center; font-size:32px; margin:0 0 16px;
+  }
+  p.section-intro{
+    text-align:center; max-width:640px; margin:0 auto 50px; font-size:16.5px; color:var(--slate);
+  }
+
+  .about-grid{
+    display:grid; grid-template-columns:1.1fr 1fr; gap:56px; align-items:start;
+  }
+  .credentials{
+    background:#fff; border:1px solid var(--line); border-radius:8px; padding:26px 28px; font-family:Arial, sans-serif;
+  }
+  .credentials h3{font-size:15px; text-transform:uppercase; letter-spacing:0.5px; margin-top:0;}
+  .credentials ul{padding-left:20px; margin:0; font-size:14.5px;}
+  .credentials li{margin-bottom:10px;}
+
+  .services-grid{
+    display:grid; grid-template-columns:repeat(2, 1fr); gap:26px;
+  }
+  .service-card{
+    background:#fff; border:1px solid var(--line); border-radius:10px; padding:32px;
+  }
+  .service-card .icon{
+    width:46px; height:46px; border-radius:50%; background:var(--accent-light);
+    display:flex; align-items:center; justify-content:center; margin-bottom:18px;
+    font-family:Arial, sans-serif; font-weight:700; color:var(--accent); font-size:18px;
+  }
+  .service-card h3{margin:0 0 10px; font-size:19px;}
+  .service-card p{font-size:15px; margin:0; color:var(--slate);}
+  .service-card ul{margin:14px 0 0; padding-left:18px; font-size:14.5px;}
+  .service-card li{margin-bottom:6px;}
+
+  .why-band{background:var(--navy); color:#fff;}
+  .why-band h2.section-title{color:#fff;}
+  .why-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:34px; margin-top:20px;}
+  .why-item{text-align:center; font-family:Arial, sans-serif;}
+  .why-item .num{
+    font-family:Georgia, serif; font-size:34px; color:#9FC7BB; margin-bottom:10px; font-weight:700;
+  }
+  .why-item h4{font-size:16px; color:#fff; margin:0 0 8px;}
+  .why-item p{font-size:14px; color:#C9D4DF; margin:0;}
+
+  .steps{display:grid; grid-template-columns:repeat(4,1fr); gap:22px; counter-reset:step;}
+  .step{text-align:center; font-family:Arial, sans-serif;}
+  .step .step-num{
+    width:36px; height:36px; border-radius:50%; background:var(--navy); color:#fff;
+    display:flex; align-items:center; justify-content:center; margin:0 auto 14px; font-weight:700;
+  }
+  .step h4{font-size:15.5px; margin:0 0 8px; color:var(--navy);}
+  .step p{font-size:13.5px; color:var(--slate); margin:0;}
+
+  .contact-band{background:var(--accent-light);}
+  .contact-box{
+    max-width:560px; margin:0 auto; background:#fff; border:1px solid var(--line); border-radius:10px;
+    padding:40px; text-align:center;
+  }
+  .contact-box h3{margin-top:0; font-size:22px;}
+  .contact-line{font-family:Arial, sans-serif; font-size:15.5px; margin:10px 0;}
+  .contact-line strong{color:var(--navy);}
+  .service-area{font-family:Arial, sans-serif; font-size:13.5px; color:var(--slate); margin-top:22px;}
+
+  footer{
+    text-align:center; padding:36px 24px; font-family:Arial, sans-serif; font-size:12.5px; color:#8A8A8A;
+    border-top:1px solid var(--line);
+  }
+  footer p{margin:4px 0;}
+
+  @media(max-width:800px){
+    .about-grid{grid-template-columns:1fr;}
+    .services-grid{grid-template-columns:1fr;}
+    .why-grid{grid-template-columns:1fr;}
+    .steps{grid-template-columns:1fr 1fr;}
+    nav.links{display:none;}
+    .hero h1{font-size:32px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav wrap">
+    <div class="brand">Melissa Atchison<span>Senior Care &amp; Advocacy</span></div>
+    <nav class="links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#process">Getting Started</a>
+    </nav>
+    <a href="#contact" class="cta-small">Contact</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Private-Pay In-Home Care &amp; Patient Advocacy, Washington State</div>
+    <h1>Hands-on care and honest advocacy, from one person you can trust, at every stage of aging.</h1>
+    <p class="sub">I help seniors age at home with dignity, and help families make sense of the medical system along the way.</p>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn btn-primary">Schedule a Consultation</a>
+      <a href="#services" class="btn btn-secondary">See Services</a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-label">About</div>
+    <h2 class="section-title">How I work</h2>
+    <p class="section-intro">Home care agencies limit what caregivers are allowed to do, and geriatric care managers usually stick to advocacy and coordination without doing any hands-on care. I do both myself.</p>
+
+    <div class="about-grid">
+      <div>
+        <p>I've spent my career as a caregiver, advocate, and concierge caregiver for seniors who want to age in their own homes. I've helped families through difficult diagnoses, translated doctor jargon into plain language, and helped people understand their rights as patients, all while still showing up for the hands-on, day-to-day care that makes independence possible.</p>
+        <p>Working independently means I'm not boxed in by agency restrictions or pay structures that push caregivers toward doing the bare minimum. I get to care for people the way I actually think is right. Sometimes that's help with a morning routine, sometimes it's sitting in on a specialist appointment, and sometimes it's holding someone's hand through the hardest days of their life.</p>
+      </div>
+      <div class="credentials">
+        <h3>Credentials &amp; Experience</h3>
+        <ul>
+          <li>Washington Home Care Aide (HCA) License</li>
+          <li>Nurse Delegation Certification</li>
+          <li>Extensive experience navigating complex medical systems and diagnoses</li>
+          <li>End-of-life care and death doula experience</li>
+          <li>Experience supporting people with disabilities</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="contact-band">
+  <div class="wrap">
+    <div class="section-label">Services</div>
+    <h2 class="section-title">What I offer</h2>
+    <p class="section-intro">Everything below is available separately or bundled together, and hands-on care is available to any senior aging in place, at any stage.</p>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="icon">1</div>
+        <h3>Hands-On Private Care</h3>
+        <p>Personal, day-to-day support for seniors aging in place, at any stage.</p>
+        <ul>
+          <li>Personal care: bathing, dressing, mobility, hygiene</li>
+          <li>Delegated nursing tasks under an active RN delegation</li>
+          <li>Companionship &amp; engagement</li>
+          <li>Transportation to appointments</li>
+          <li>Post-hospital transition support</li>
+          <li>Respite care for family caregivers</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="icon">2</div>
+        <h3>Patient &amp; Family Advocacy</h3>
+        <p>Help understanding and navigating the medical system.</p>
+        <ul>
+          <li>Accompanying you to doctor visits, translating medical jargon</li>
+          <li>Navigating new or complex diagnoses</li>
+          <li>Coordinating between specialists, pharmacy, and insurance</li>
+          <li>Understanding patient rights and options</li>
+          <li>Advance care planning support</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="icon">3</div>
+        <h3>End-of-Life &amp; Death Doula Support</h3>
+        <p>Comfort, presence, and guidance for patients and families.</p>
+        <ul>
+          <li>Non-medical comfort and companionship</li>
+          <li>Legacy work and life review</li>
+          <li>Family support, including after-death guidance</li>
+          <li>Coordination alongside hospice teams</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="icon">4</div>
+        <h3>Integrated Concierge Care</h3>
+        <p>This is really what sets things apart. One person handling both sides of your care.</p>
+        <ul>
+          <li>One trusted relationship instead of coordinating multiple providers</li>
+          <li>Blended hours across hands-on care and advocacy, as needs shift</li>
+          <li>Consistency across the full arc of aging</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="why-band">
+  <div class="wrap">
+    <div class="section-label" style="color:#9FC7BB;">Why This Is Different</div>
+    <h2 class="section-title">Somewhere between an agency and a care manager, but built around you</h2>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="num">01</div>
+        <h4>One person you actually know</h4>
+        <p>No rotating staff and no separate advocate to loop in. The same person who knows your situation is the one giving the hands-on care.</p>
+      </div>
+      <div class="why-item">
+        <div class="num">02</div>
+        <h4>Licensed and experienced</h4>
+        <p>Licensed as a Home Care Aide with nurse delegation certification, plus years of hands-on experience with complex medical navigation and end-of-life care.</p>
+      </div>
+      <div class="why-item">
+        <div class="num">03</div>
+        <h4>Care without the restrictions</h4>
+        <p>Private-pay and independent, so your care gets shaped around what you actually need instead of agency policy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="section-label">Getting Started</div>
+    <h2 class="section-title">How we get started</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h4>Reach Out</h4>
+        <p>Send an email or give me a call and tell me what's going on.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h4>Talk it Through</h4>
+        <p>We'll talk about your situation and what you're hoping for.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h4>Build a Plan</h4>
+        <p>I'll put together a plan combining whatever mix of care and advocacy makes sense.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h4>Get Started</h4>
+        <p>We begin, on whatever schedule actually works for you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact-band">
+  <div class="wrap">
+    <div class="contact-box">
+      <h3>Get in touch</h3>
+      <p style="font-size:15px;">Reach out for a no-pressure conversation about your situation. There's no issue too complicated, and nothing too small to ask about.</p>
+      <p class="contact-line"><strong>Email:</strong> <a href="mailto:melissa@melissaatchison.com">melissa@melissaatchison.com</a></p>
+      <p class="contact-line"><strong>Phone:</strong> [Add phone number]</p>
+      <a href="mailto:melissa@melissaatchison.com" class="btn btn-primary" style="margin-top:18px; display:inline-block;">Email Melissa</a>
+      <p class="service-area">Serving clients throughout the Puget Sound region, Washington State.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 Melissa Atchison Senior Care &amp; Advocacy, LLC. All rights reserved.</p>
+  <p>Advocacy and care-navigation services are informational, not legal or medical advice.</p>
+</footer>
+
+</body>
+</html>
