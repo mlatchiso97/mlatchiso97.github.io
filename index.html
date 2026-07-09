@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Melissa Atchison Senior Care &amp; Advocacy, LLC</title>
 <meta name="description" content="Private-pay, in-home senior care and patient advocacy in the Puget Sound region. One licensed provider offering hands-on care and honest advocacy at every stage of aging.">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
 <style>
   :root{
     --navy:#1F3A5F;
@@ -24,7 +27,7 @@
     background:var(--cream);
     line-height:1.6;
   }
-  h1,h2,h3,.brand{
+  h1,h2,h3{
     font-family:'Helvetica Neue', Arial, sans-serif;
     color:var(--navy);
   }
@@ -37,20 +40,28 @@
     border-bottom:1px solid var(--line);
   }
   .nav{display:flex; align-items:center; justify-content:space-between; padding:16px 24px;}
-  .brand{font-size:18px; font-weight:700; letter-spacing:0.3px;}
-  .brand span{display:block; font-size:11px; font-weight:400; color:var(--accent); letter-spacing:1px; text-transform:uppercase; font-family:Arial, sans-serif;}
+  .brand img{height:42px; width:auto; display:block;}
+  .hero-logo{display:block; margin:0 auto 26px; height:210px; width:auto; max-width:90%;}
   nav.links{display:flex; gap:28px; font-family:Arial, sans-serif; font-size:14.5px;}
   nav.links a{color:var(--navy); font-weight:600;}
   .cta-small{
     background:var(--navy); color:#fff !important; padding:9px 18px; border-radius:4px; font-weight:600;
+    margin-left:auto;
   }
 
   .hero{
-    background:linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+    position:relative;
+    overflow:hidden;
+    background:
+      radial-gradient(ellipse 640px 420px at 50% 8%, rgba(77,178,157,0.22), transparent 68%),
+      linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
     color:#fff;
-    padding:90px 24px 100px;
+    padding:90px 24px 130px;
     text-align:center;
   }
+  .hero .wrap{position:relative; z-index:1;}
+  .hero-wave{position:absolute; left:0; right:0; bottom:-1px; line-height:0; z-index:0;}
+  .hero-wave svg{display:block; width:100%; height:64px;}
   .hero .eyebrow{
     font-family:Arial, sans-serif; text-transform:uppercase; letter-spacing:2px; font-size:12.5px;
     color:#9FC7BB; margin-bottom:18px;
@@ -59,14 +70,18 @@
     color:#fff; font-size:42px; margin:0 0 18px; line-height:1.25; max-width:780px; margin-left:auto; margin-right:auto;
   }
   .hero p.sub{
-    font-size:18px; max-width:620px; margin:0 auto 34px; color:#DCE4EC;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:18px; line-height:1.55; max-width:620px; margin:0 auto 34px; color:#F0F4F8;
   }
   .hero-ctas{display:flex; gap:16px; justify-content:center; flex-wrap:wrap; font-family:Arial, sans-serif;}
   .btn{
     display:inline-block; padding:13px 28px; border-radius:4px; font-weight:700; font-size:15px;
+    transition:background-color .2s ease, border-color .2s ease, transform .2s ease;
   }
   .btn-primary{background:var(--accent); color:#fff;}
+  .btn-primary:hover{background:#245A4F; transform:translateY(-1px);}
   .btn-secondary{background:transparent; color:#fff; border:1.5px solid rgba(255,255,255,0.5);}
+  .btn-secondary:hover{background:rgba(255,255,255,0.08); border-color:rgba(255,255,255,0.85); transform:translateY(-1px);}
 
   section{padding:76px 24px;}
   .section-label{
@@ -140,6 +155,7 @@
     border-top:1px solid var(--line);
   }
   footer p{margin:4px 0;}
+  .footer-icon{display:block; margin:0 auto 14px; height:44px; width:auto;}
 
   @media(max-width:800px){
     .about-grid{grid-template-columns:1fr;}
@@ -148,6 +164,7 @@
     .steps{grid-template-columns:1fr 1fr;}
     nav.links{display:none;}
     .hero h1{font-size:32px;}
+    .hero-logo{height:150px;}
   }
 </style>
 </head>
@@ -155,7 +172,6 @@
 
 <header>
   <div class="nav wrap">
-    <div class="brand">Melissa Atchison<span>Senior Care &amp; Advocacy</span></div>
     <nav class="links">
       <a href="#about">About</a>
       <a href="#services">Services</a>
@@ -168,6 +184,7 @@
 
 <section class="hero">
   <div class="wrap">
+    <img src="logo-hero-reversed.png" alt="Melissa Atchison Senior Care &amp; Advocacy" class="hero-logo">
     <div class="eyebrow">Private-Pay In-Home Care &amp; Patient Advocacy, Washington State</div>
     <h1>Hands-on care and honest advocacy, from one person you can trust, at every stage of aging.</h1>
     <p class="sub">I help seniors age at home with dignity, and help families make sense of the medical system along the way.</p>
@@ -175,6 +192,11 @@
       <a href="#contact" class="btn btn-primary">Schedule a Consultation</a>
       <a href="#services" class="btn btn-secondary">See Services</a>
     </div>
+  </div>
+  <div class="hero-wave">
+    <svg viewBox="0 0 1440 64" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,32 C360,72 1080,-8 1440,32 L1440,64 L0,64 Z" fill="#FAF8F4"/>
+    </svg>
   </div>
 </section>
 
@@ -319,7 +341,7 @@
       <h3>Get in touch</h3>
       <p style="font-size:15px;">Reach out for a no-pressure conversation about your situation. There's no issue too complicated, and nothing too small to ask about.</p>
       <p class="contact-line"><strong>Email:</strong> <a href="mailto:melissa@melissaatchison.com">melissa@melissaatchison.com</a></p>
-      <p class="contact-line"><strong>Phone:</strong> [Add phone number]</p>
+      <p class="contact-line"><strong>Phone:</strong> <a href="tel:+12063958441">(206) 395-8441</a></p>
       <a href="mailto:melissa@melissaatchison.com" class="btn btn-primary" style="margin-top:18px; display:inline-block;">Email Melissa</a>
       <p class="service-area">Serving clients throughout the Puget Sound region, Washington State.</p>
     </div>
@@ -327,6 +349,7 @@
 </section>
 
 <footer>
+  <img src="logo-icon-footer.png" alt="Melissa Atchison Senior Care &amp; Advocacy icon" class="footer-icon">
   <p>&copy; 2026 Melissa Atchison Senior Care &amp; Advocacy, LLC. All rights reserved.</p>
   <p>Advocacy and care-navigation services are informational, not legal or medical advice.</p>
 </footer>
