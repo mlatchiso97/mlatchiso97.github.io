@@ -96,6 +96,29 @@
   .about-grid{
     display:grid; grid-template-columns:1.1fr 1fr; gap:56px; align-items:start;
   }
+  .about-photo-row{display:flex; align-items:center; gap:20px; margin-bottom:26px;}
+  .about-photo{
+    width:96px; height:96px; border-radius:50%; object-fit:cover; flex-shrink:0;
+    border:3px solid #fff; box-shadow:0 2px 10px rgba(31,58,95,0.15);
+  }
+  .about-name h3{margin:0 0 2px; font-size:20px;}
+  .about-name p{margin:0; font-family:Arial, sans-serif; font-size:14px; color:var(--accent); font-weight:600;}
+  .about-photo-wide{
+    width:100%; border-radius:10px; display:block; margin-top:48px; box-shadow:0 4px 18px rgba(31,58,95,0.12);
+  }
+  .about-photo-caption{
+    text-align:center; font-family:Arial, sans-serif; font-size:14px; font-style:italic; color:var(--slate);
+    margin:14px 0 0;
+  }
+  .memorial-note{
+    margin-top:44px; padding-top:36px; border-top:1px solid var(--line);
+    display:flex; flex-direction:column; align-items:center; text-align:center; gap:10px;
+  }
+  .memorial-note img{width:96px; height:auto;}
+  .memorial-note p{
+    font-family:Georgia, 'Times New Roman', serif; font-style:italic; font-size:16px;
+    color:var(--slate); margin:0; max-width:440px;
+  }
   .credentials{
     background:#fff; border:1px solid var(--line); border-radius:8px; padding:26px 28px; font-family:Arial, sans-serif;
   }
@@ -147,6 +170,10 @@
   .contact-line{font-family:Arial, sans-serif; font-size:15.5px; margin:10px 0;}
   .contact-line strong{color:var(--navy);}
   .service-area{font-family:Arial, sans-serif; font-size:13.5px; color:var(--slate); margin-top:22px;}
+  .trust-badge{
+    font-family:Arial, sans-serif; font-size:13px; font-weight:700; letter-spacing:1.5px;
+    color:var(--accent); margin:18px 0 0;
+  }
 
   footer{
     text-align:center; padding:36px 24px; font-family:Arial, sans-serif; font-size:12.5px; color:#8A8A8A;
@@ -206,12 +233,20 @@
 
     <div class="about-grid">
       <div>
+        <div class="about-photo-row">
+          <img src="melissa-headshot.png" alt="Melissa Atchison" class="about-photo">
+          <div class="about-name">
+            <h3>Melissa Atchison</h3>
+            <p>Owner &amp; Caregiver</p>
+          </div>
+        </div>
         <p>I've spent my career as a caregiver, advocate, and concierge caregiver for seniors who want to age in their own homes. I've helped families through difficult diagnoses, translated doctor jargon into plain language, and helped people understand their rights as patients, all while still showing up for the hands-on, day-to-day care that makes independence possible.</p>
-        <p>Working independently means I'm not boxed in by agency restrictions or pay structures that push caregivers toward doing the bare minimum. I get to care for people the way I actually think is right. Sometimes that's help with a morning routine, sometimes it's sitting in on a specialist appointment, and sometimes it's holding someone's hand through the hardest days of their life.</p>
+        <p>Working independently means there are no restrictions on the kind of care I can provide, so I'm free to meet a person's needs fully, not just the parts that fit inside an agency's liability. I treat every client the way I'd want my own family treated: with kindness, compassion, empathy, patience, and respect for their independence, encouraging them to do what they can on their own and stepping in exactly when and where it's needed. On the hard days, I lean on an old saying that's stuck with me: if you don't use it, you'll lose it. Trust and reliability matter more than almost anything in this field, and one of the simplest ways I earn them is by showing up on time, ready to work, and communicating clearly every step of the way.</p>
       </div>
       <div class="credentials">
         <h3>Credentials &amp; Experience</h3>
         <ul>
+          <li>Licensed, bonded &amp; insured</li>
           <li>Washington Home Care Aide (HCA) License</li>
           <li>Nurse Delegation Certification</li>
           <li>Extensive experience navigating complex medical systems and diagnoses</li>
@@ -220,6 +255,14 @@
         </ul>
       </div>
     </div>
+
+    <img src="care-moment.png" alt="Melissa sharing a quiet, connected moment doing a puzzle together" class="about-photo-wide">
+    <p class="about-photo-caption">Presence matters as much as tasks — care built on real relationships, not a checklist.</p>
+
+    <div class="memorial-note">
+      <img src="hummingbird-memorial.png" alt="Watercolor hummingbird and roses">
+      <p>In loving memory of Nana — hummingbirds are believed to carry a spirit home, and roses will always remind me of her.</p>
+    </div>
   </div>
 </section>
 
@@ -227,7 +270,7 @@
   <div class="wrap">
     <div class="section-label">Services</div>
     <h2 class="section-title">What I offer</h2>
-    <p class="section-intro">Everything below is available separately or bundled together, and hands-on care is available to any senior aging in place, at any stage.</p>
+    <p class="section-intro">No two families need exactly the same thing, so we'll build a personalized care plan around what matters most to you and your loved one.</p>
 
     <div class="services-grid">
       <div class="service-card">
@@ -272,7 +315,7 @@
         <p>This is really what sets things apart. One person handling both sides of your care.</p>
         <ul>
           <li>One trusted relationship instead of coordinating multiple providers</li>
-          <li>Blended hours across hands-on care and advocacy, as needs shift</li>
+          <li>Flexible support that adjusts as your needs change, without bringing in a new provider</li>
           <li>Consistency across the full arc of aging</li>
         </ul>
       </div>
@@ -341,6 +384,7 @@
       <p class="contact-line"><strong>Email:</strong> <a href="mailto:melissa@melissaatchison.com">melissa@melissaatchison.com</a></p>
       <p class="contact-line"><strong>Phone:</strong> <a href="tel:+12063958441">(206) 395-8441</a></p>
       <a href="mailto:melissa@melissaatchison.com" class="btn btn-primary" style="margin-top:18px; display:inline-block;">Email Melissa</a>
+      <p class="trust-badge">LICENSED &middot; BONDED &middot; INSURED</p>
       <p class="service-area">Serving clients throughout the Puget Sound region, Washington State.</p>
     </div>
   </div>
